@@ -8,13 +8,13 @@
 !README.md
 
 !.config
-!.config/alacritty
-!.config/sxkhd
-!.config/nvim
-!.config/bspwm
-!.config/rofi
-!.config/picom
-!.config/polybar
+!.config/alacritty/alacritty.yml
+!.config/sxkhd/sxhkdrc
+!.config/nvim/init.vim
+!.config/bspwm/bspwmrc
+!.config/rofi/config.rasi
+!.config/picom/picom.conf
+!.config/polybar/config.ini
 !.config/mpv/mpv.conf
 !.config/ncmpcpp/config
 !.config/mpd/mpd.conf
