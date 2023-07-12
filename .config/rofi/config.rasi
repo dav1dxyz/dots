@@ -1,0 +1,13 @@
+configuration {
+	modi: "drun,combi";
+	font: "hack 10";
+	show-icons: true;
+	display-drun: "";
+	display-run: "";
+	disable-history: true;
+	display-combi: "> ";
+	drun-display-format: "{icon} {name}";
+	icon-theme: "papirus";
+	combi-modi: "drun";
+}
+@theme "sidebar"

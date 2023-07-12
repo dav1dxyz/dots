@@ -1,0 +1,73 @@
+#! /bin/sh
+
+# startup
+pgrep -x sxhkd > /dev/null || sxhkd &
+picom --config ~/.config/picom/picom.conf -b &
+dunst &
+xset r rate 200 25
+setxkbmap gb
+polybar mybar &
+xsetroot -cursor_name left_ptr
+/usr/lib/geoclue-2.0/demos/agent &
+nm-applet &
+xset r rate 250 60
+pactl set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
+
+# Fix intellij idea
+wmname LG3D &
+
+# bg
+feh --bg-scale /home/david/walls/jeremy-bishop-uAfZBP-GtiA-unsplash.jpg
+
+# displays
+xrandr --output HDMI-0 --primary --mode 1920x1080 --rate 74.97 --rotate normal --output DVI-D-0 --mode 1920x1080 --rate 74.97 --right-of HDMI-0
+
+# JetBrains software
+wmname LG3D &
+bspc rule -a jetbrains-studio border=off follow=on desktop=^3
+bspc rule -a jetbrains-idea border=off follow=on desktop=^3
+
+#bspc monitor HDMI2 -d         
+#bspc monitor VGA1 -d    
+
+bspc monitor HDMI-0 -d         
+bspc monitor DVI-D-0 -d    
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Browsers
+bspc rule -a firefox follow=on desktop=^1
+
+# Terminals
+bspc rule -a Alacritty follow=on desktop=^2
+
+# Code
+bspc rule -a VSCodium desktop=^3
+
+# Steam
+bspc rule -a Steam desktop=^4
+
+# Social
+bspc rule -a discord desktop=^5
+bspc rule -a TelegramDesktop desktop=^5
+
+# VMs
+bspc rule -a Virt-manager follow=on desktop=^7
+bspc rule -a "VirtualBox Manager" follow=on desktop=^7
+
+# Android
+bspc rule -a scrcpy state=floating desktop=^8
+
+# Downloads
+bspc rule -a qBittorrent desktop=^9
+bspc rule -a SoulseekQt desktop=^9
+bspc rule -a Go2TV state=floating desktop=^9
+
+# Watching stuff
+bspc rule -a vlc follow=on desktop=^6
+bspc rule -a mpv follow=on desktop=^6
