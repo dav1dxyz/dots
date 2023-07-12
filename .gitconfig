@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	email = dps9102@protonmail.com
+	name = dav1dxyz
+[credential]
+	helper = store
+[protocol "file"]
+	allow = always
